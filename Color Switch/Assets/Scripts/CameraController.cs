@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        if(_player == null) { return; }
+
         Vector3 playerPos = _player.transform.position;
 
         if(playerPos.y > transform.position.y)

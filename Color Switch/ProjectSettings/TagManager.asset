@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cyan
+  - Magenta
+  - Purple
+  - Yellow
+  - RandomColorChanger
+  - SimpleColorChanger
   layers:
   - Default
   - TransparentFX
@@ -13,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Obstacles
   - 
   - 
   - 
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2142654715
+    locked: 0
+  - name: Player
+    uniqueID: 107587985
     locked: 0
