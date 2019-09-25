@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <None Include="Assets\Fonts\Roboto\LICENSE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/JOJU/UNITY_PROJECTS/2D/Color_Switch_Replica/Color Switch/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

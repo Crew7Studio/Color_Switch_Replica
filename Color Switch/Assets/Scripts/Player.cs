@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float _jumpForce;
+
+    private Rigidbody2D _rigidBody;
+    private SpriteRenderer _spriteRenderer;
+    private Color _currentColor;
+
     void Start()
     {
-        
+        _rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        {
+            _rigidBody.velocity = Vector2.up * _jumpForce;
+        }
     }
 }
