@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
 
+    [SerializeField] private string _levelToLoad;
+    [SerializeField] private GameObject _LevelComplete;
+
     private void OnEnable()
     {
         if(_instance == null) { _instance = this; }
@@ -17,5 +20,10 @@ public class GameManager : MonoBehaviour
     public void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        _LevelComplete.SetActive(true);
     }
 }

@@ -17,7 +17,6 @@ public class Chameleon : MonoBehaviour
     public void RandomColor()
     {
         int colorIndex = Random.Range(0, 4);
-        print(colorIndex);
 
         switch (colorIndex)
         {

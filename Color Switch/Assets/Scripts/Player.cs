@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [HideInInspector] public int points = 0;
+
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _gravity;
 
     [Header("Colors")]
     [SerializeField] private Color _cyan;
@@ -16,20 +19,26 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
     private string _currentColor;
+    private bool _levelCompleted;
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _rigidBody.gravityScale = .1f;
         SetRandomColor();
+        _levelCompleted = false;
     }
 
 
 
     void Update()
     {
+        if (_levelCompleted) { return; }
+
         Movement();
 
+        // If player goes out of the lower camera bounds
         if(transform.position.y < Camera.main.transform.position.y - 10f)
         {
             GameManager.Instance.ReloadLevel();
@@ -41,6 +50,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
+            _rigidBody.gravityScale = _gravity;
             _rigidBody.velocity = Vector2.up * _jumpForce;
         }
     }
@@ -48,13 +58,20 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == _currentColor) {
-            print("same color");
+        if (_levelCompleted) { return; }
+
+        if (other.tag == _currentColor)
+        {
         }
         else if (other.tag == "RandomColorChanger")
         {
+            points++;
             SetRandomColor();
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "Finish") {
+            _levelCompleted = true;
+            GameManager.Instance.NextLevel();
         }
         else
         {
@@ -67,6 +84,7 @@ public class Player : MonoBehaviour
     private void SetRandomColor()
     {
         int colorIndex = Random.Range(0, 4);
+        string tempColor = _currentColor;
 
         switch (colorIndex)
         {
@@ -86,6 +104,11 @@ public class Player : MonoBehaviour
                 _currentColor ="Yellow";
                 _spriteRenderer.material.color = _yellow;
                 break;
+        }
+
+        if(tempColor == _currentColor)
+        {
+            SetRandomColor();
         }
     }
 
