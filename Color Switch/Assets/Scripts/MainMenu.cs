@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-       // Screen.SetResolution(480, 720, false);
+       Screen.SetResolution(480, 710, false);
     }
 
     public void Play()
