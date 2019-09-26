@@ -83,11 +83,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b647b629c551d499fc2e0b2c3cc836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
   _jumpForce: 5
+  _gravity: 0
   _cyan: {r: 0.20784315, g: 0.8862746, b: 0.9490197, a: 1}
   _magenta: {r: 1, g: 0, b: 0.5019608, a: 1}
   _purple: {r: 0.54901963, g: 0.07450981, b: 0.9843138, a: 1}
   _yellow: {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
+  _jump: {fileID: 8300000, guid: 78a478c77268c1d47ae41c31c6e3b157, type: 3}
+  _hit: {fileID: 8300000, guid: cced018cd4cbb4948a297b9cf46f7d3f, type: 3}
 --- !u!1 &3927361356457008565
 GameObject:
   m_ObjectHideFlags: 0

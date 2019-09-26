@@ -28,14 +28,13 @@ public class LevelComplete : MonoBehaviour
 
     public void MainMenu()
     {
-        //SceneManager.LoadScene(_mainMenu);
-        print("Main menu");
+        SceneManager.LoadScene(_mainMenu);
     }
 
     IEnumerator AnimateText()
     {
         int count = 0;
-        while(count < _point)
+        while(count <= _point)
         {
             _points.text = count.ToString();
             count++;

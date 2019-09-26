@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
 
-    [SerializeField] private string _levelToLoad;
     [SerializeField] private GameObject _LevelComplete;
 
     private void OnEnable()

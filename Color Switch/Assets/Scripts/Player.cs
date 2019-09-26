@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [HideInInspector] public int points = 0;
+    public int points = 0;
 
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
@@ -15,18 +15,20 @@ public class Player : MonoBehaviour
     [SerializeField] private Color _purple;
     [SerializeField] private Color _yellow;
 
+   
 
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
     private string _currentColor;
     private bool _levelCompleted;
+    
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _rigidBody.gravityScale = .1f;
-        SetRandomColor();
+        SetRandomColor(Random.Range(0, 4));
         _levelCompleted = false;
     }
 
@@ -66,13 +68,21 @@ public class Player : MonoBehaviour
         else if (other.tag == "RandomColorChanger")
         {
             points++;
-            SetRandomColor();
+            SetRandomColor(Random.Range(0, 4));
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "SimpleColorChanger")
+        {
+            points++;
+            SetRandomColor(Random.Range(0, 2));
+            Destroy(other.gameObject);
+
         }
         else if (other.tag == "Finish") {
             _levelCompleted = true;
             GameManager.Instance.NextLevel();
         }
+        
         else
         {
             GameManager.Instance.ReloadLevel();
@@ -81,9 +91,9 @@ public class Player : MonoBehaviour
 
 
 
-    private void SetRandomColor()
+    private void SetRandomColor(int index)
     {
-        int colorIndex = Random.Range(0, 4);
+        int colorIndex = index;
         string tempColor = _currentColor;
 
         switch (colorIndex)
@@ -93,12 +103,12 @@ public class Player : MonoBehaviour
                 _spriteRenderer.material.color = _cyan;
                 break;
             case 1:
-                _currentColor ="Magenta";
-                _spriteRenderer.material.color = _magenta;
+                _currentColor = "Purple";
+                _spriteRenderer.material.color = _purple;
                 break;
             case 2:
-                _currentColor ="Purple";
-                _spriteRenderer.material.color = _purple;
+                _currentColor = "Magenta";
+                _spriteRenderer.material.color = _magenta;
                 break;
             case 3:
                 _currentColor ="Yellow";
@@ -108,7 +118,7 @@ public class Player : MonoBehaviour
 
         if(tempColor == _currentColor)
         {
-            SetRandomColor();
+            SetRandomColor(Random.Range(0, 2));
         }
     }
 
