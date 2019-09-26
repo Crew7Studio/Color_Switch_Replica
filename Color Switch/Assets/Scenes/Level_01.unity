@@ -175,7 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da7b21eb76a62148a5b0956cc7f7689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: Level_02
   _LevelComplete: {fileID: 362253335}
 --- !u!1 &362253335
 GameObject:
@@ -203,11 +202,11 @@ RectTransform:
   m_GameObject: {fileID: 362253335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59702, y: 0.59702, z: 0.59702}
   m_Children:
   - {fileID: 490275840}
   m_Father: {fileID: 1400449313}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -338,8 +337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000037676018, y: 173.64998}
-  m_SizeDelta: {x: 336.3, y: 234.5}
+  m_AnchoredPosition: {x: -0.000005722, y: 145.45}
+  m_SizeDelta: {x: 381.3, y: 290.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380200087
 MonoBehaviour:
@@ -502,7 +501,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 9.049988}
-  m_SizeDelta: {x: 923.7, y: 1351.9}
+  m_SizeDelta: {x: 1193.6, y: 1749.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490275841
 MonoBehaviour:
@@ -1306,7 +1305,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 480, y: 710}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1345,9 +1344,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 56681950}
   - {fileID: 362253336}
   - {fileID: 1530687338}
-  - {fileID: 56681950}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1782,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 176022534391916593, guid: dd8d102da48ba5d45bd78ba989c057c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 176022534391916593, guid: dd8d102da48ba5d45bd78ba989c057c2,
         type: 3}
@@ -2313,11 +2312,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 4848218277270260055, guid: 30a42c03da92ece41969e866c367d217,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4848218277270260052, guid: 30a42c03da92ece41969e866c367d217,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2356,7 +2350,7 @@ PrefabInstance:
     - target: {fileID: 4848218277270260052, guid: 30a42c03da92ece41969e866c367d217,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4848218277270260052, guid: 30a42c03da92ece41969e866c367d217,
         type: 3}
@@ -2426,6 +2420,26 @@ PrefabInstance:
     - target: {fileID: 4848218278885822397, guid: 30a42c03da92ece41969e866c367d217,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848218278885822394, guid: 30a42c03da92ece41969e866c367d217,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848218278885822394, guid: 30a42c03da92ece41969e866c367d217,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1290.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848218278885822394, guid: 30a42c03da92ece41969e866c367d217,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1700.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848218278885822394, guid: 30a42c03da92ece41969e866c367d217,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

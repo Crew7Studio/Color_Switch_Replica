@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int points = 0;
+    public int points;
 
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        points = 0;
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _rigidBody.gravityScale = .1f;
@@ -60,7 +61,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (_levelCompleted) { return; }
+        if (_levelCompleted) {
+            _rigidBody.gravityScale = 0f;
+            return; }
 
         if (other.tag == _currentColor)
         {
