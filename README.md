@@ -19,7 +19,7 @@ Use Escape key or pause button to go to pause menu.</br>
 <img src = "Color%20Switch/Screenshots/Screenshot%20(68).png" width = "300"/>
 <img src = "Color%20Switch/Screenshots/Screenshot%20(70).png" width = "300"/></p></br>
 
-### Gameplay -> https://www.youtube.com/watch?v=xpokuzMmhQA
+### Gameplay -> https://youtu.be/Stk8llWFOBI
 
 
 ### ADDED
