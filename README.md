@@ -2,6 +2,8 @@
 
 ### Replica of the Color Switch game</br>
 
+### Gameplay - https://youtu.be/Stk8llWFOBI
+### Itch.io - https://crew7studiogames.itch.io/color-switch-replica
 
 ### CONTROLS
 Use Mouse left button or space button to jump.</br>
@@ -19,8 +21,6 @@ Use Escape key or pause button to go to pause menu.</br>
 <img src = "Color%20Switch/Screenshots/Screenshot%20(68).png" width = "300"/>
 <img src = "Color%20Switch/Screenshots/Screenshot%20(70).png" width = "300"/></p></br>
 
-### Gameplay -> https://youtu.be/Stk8llWFOBI
-
 
 ### ADDED
 * Added 2 Levels.</br>
@@ -31,7 +31,6 @@ Use Escape key or pause button to go to pause menu.</br>
 
 
 ### Goto builds folder to download the game for PC or Android or Web
-### Goto Gameplay folder to view the gameplay
 
-### Game made based on BRACKEYS tutorial link -> https://www.youtube.com/watch?v=gE7gc1sblUA&list=PLPV2KyIb3jR5RwVEjFCiN5BvK3Quqgv_M&index=9%E2%80%8B
+### Game made based on BRACKEYS tutorial link - https://www.youtube.com/watch?v=gE7gc1sblUA&list=PLPV2KyIb3jR5RwVEjFCiN5BvK3Quqgv_M&index=9%E2%80%8B
 </br>
